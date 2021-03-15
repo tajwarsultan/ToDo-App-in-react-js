@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+body{
+  box-sizing: border-box;
+  background: rgb(82, 11, 11);
+  color: aliceblue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tododiv{
+  border: solid black 2px;
+  width: 36%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoApp{
+  margin: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.addtodo{
+  margin-left: 2px;
+}
+ul{
+  width: 70%;
+}
+ul li{
+  border: solid 1px wheat;
+  text-align: center;
+  margin: 5px;
+}
+ul li button{
+  margin: 1px;
+  margin-left: 25px;
+}
+.Input1{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.Input2{
+  margin-top: 10px;
+  margin-left: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.inputtodo{
+  width: 95%;
+  margin-right: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.props{
+  border: 1px  black solid;
+}
+.parent{
+  display: flex;
+  height: 39vh;
+  gap: 10px;
+  text-align: center;
+  font-size: 10px;
+  background-color: green ;
 }
