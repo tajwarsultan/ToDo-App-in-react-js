@@ -6,6 +6,7 @@ export default function TodosFun() {
         todos: [{ title: "shams", id: false }, { title: "shams", id: false }, { title: "shams", id: false }],
         value: ''
     })
+    const [error, setError] = useState('')
     const handelChange = (e) => {
         console.log(value)
 
@@ -13,14 +14,17 @@ export default function TodosFun() {
             ...state,
             value: e.target.value,
         });
+        setError('')
     }
     // console.log(value)
 
     const AddTodo = (event) => {
 
         event.preventDefault();
-
-        if (value) {
+        if (state.value === '') {
+            setError('please enter value')
+        }
+        if (state.value) {
             let obj = { title: state.value }
             setState({
                 todos: [...state.todos, obj],
@@ -67,12 +71,13 @@ export default function TodosFun() {
                         <h1>Todo App in Functional Component</h1>
 
                         <input
-                        className="Input2"
+                            className="Input2"
                             type="text"
                             placeholder="enter  Here ..."
                             value={value}
                             onChange={(e) => handelChange(e)}
                         />
+                        <p style={{color:"red"}}>{error}</p>
                         <button onClick={(e) => AddTodo(e)}>Add me</button>
                     </form>
                     <ul>
